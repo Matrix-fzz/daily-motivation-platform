@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ignite Your Drive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <h1>Ignite Your Drive</h1>
+      <p class="subtitle">Elevate Your Everyday</p>
+    </header>
+
+    <section id="advice" class="card">
+      <h2>Quote of the Day</h2>
+      <p id="adviceText">Click the button below for a piece of advice...</p>
+      <button id="newAdvice">Get New Advice</button>
+    </section>
+
+    <section id="goals" class="card">
+      <h2>My Objectives</h2>
+      <div id="progressContainer">
+        <p>Overall Progress:</p>
+        <div class="progress-bar-wrapper">
+          <div id="progressBar"></div>
+        </div>
+        <div id="progressPercentage">0%</div>
+      </div>
+      <ul id="goalList"></ul>
+      <div class="goal-input-container">
+        <div class="goal-input-row">
+          <input id="goalInput" type="text" placeholder="Add a new objective..." />
+          <button id="addGoal" aria-label="Add Goal">+</button>
+        </div>
+        <div class="description-label">Description</div>
+        <textarea id="goalDescriptionInput" placeholder="Add a description for your objective (optional)..."></textarea>
+      </div>
+      <!-- Restore area for recently deleted objectives -->
+      <div id="restoreContainer">
+        <div id="restoreBox">
+          <p class="restore-header">Recently Deleted:</p>
+          <ul id="trashList"></ul>
+          <button id="clearTrashBtn">Clear All Trash</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: Trending Articles Section -->
+    <section id="trending-articles" class="card">
+      <h2>Trending Articles</h2>
+      <div id="articleGrid" class="article-grid">
+        <!-- Skeletons will be injected here by JS -->
+      </div>
+    </section>
+
+    <section id="inspiration" class="card">
+      <h2>Inspiration Station</h2>
+
+      <div class="media-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="video">Videos</button>
+        <button class="filter-btn" data-filter="podcast">Podcasts</button>
+        <button class="filter-btn" data-filter="compilation">
+          Compilations
+        </button>
+        <button class="filter-btn" data-filter="quotes">Quotes</button>
+        <button class="filter-btn" data-filter="interviews">
+          Interviews
+        </button>
+        <button class="filter-btn" data-filter="morning">
+          Morning Motivation
+        </button>
+        <button class="filter-btn" data-filter="business">
+          Business Motivation
+        </button>
+        <button class="filter-btn" data-filter="gym">Gym Motivation</button>
+        <button class="filter-btn" data-filter="wisdom">
+          Wisdom & Philosophy
+        </button>
+        <button class="filter-btn" data-filter="celebrities">
+          Celebrities
+        </button>
+      </div>
+
+      <div id="mediaGrid" class="media-grid">
+        <!-- Skeletons will be injected here by JS -->
+      </div>
+    </section>
+
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
